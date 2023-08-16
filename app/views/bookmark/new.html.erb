@@ -1,0 +1,6 @@
+<%= simple_form_for @bookmark, url: bookmark_path(params[:id]), method: :post do |f| %>
+  <%= f.input :list_id, as: :hidden, input_html: { value: params[:id] } %>
+  <%= f.input :comment, label: 'comment' %>
+  <%= f.association :movie, label_method: :title, value_method: :id, include_blank: false %>
+  <%= f.button :submit, 'Create Bookmark' %>
+<% end %>
