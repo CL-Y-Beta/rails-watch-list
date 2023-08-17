@@ -1,0 +1,40 @@
+$white: #fcfcfc;
+
+
+#home-splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-bottom: 40px;
+}
+#home-splash h1{
+  color: $white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+#home-splash img{
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1{
+  color: $white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+#lists{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 75px;
+}
+
+.list-area{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

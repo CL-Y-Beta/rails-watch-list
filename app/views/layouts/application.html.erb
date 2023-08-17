@@ -11,6 +11,17 @@
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-left">
+        <%= link_to "Movie App", root_path %>
+      </div>
+      <div class="navbar-right">
+        <%= link_to "All Lists", all_lists_path %>
+        <%= link_to "New List", new_list_path%>
+      </div>
+    </div>
+      <%= yield %>
+  </div>
   </body>
 </html>

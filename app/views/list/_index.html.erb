@@ -1,0 +1,18 @@
+<!---- <ul>
+<% @lists.each do |list|%>
+  <li><%= link_to list.name, list_path(list) %></li>
+<% end %>
+</ul>
+----!>
+
+<div class="lists">
+  <% @lists.each do |list|%>
+  <div class="card" style="width: 18rem; border-radius="10px" col-8>
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%=list.name%></h5>
+      <a href="<%= list_path(list) %>" class="btn btn-primary">View List</a>
+    </div>
+  </div>
+  <% end %>
+</div>

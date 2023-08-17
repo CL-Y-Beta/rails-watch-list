@@ -1,0 +1,26 @@
+$white: #fcfcfc;
+$pink: #ff30a5;
+
+.navbar a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: $white;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  &:hover {
+    color: $pink;
+  }
+}
+
+.navbar {
+  padding: 20px;
+}
+.navbar-right {
+  display: flex;
+}
+
+.navbar-right a {
+  font-weight: 200;
+}
