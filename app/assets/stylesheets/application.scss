@@ -20,6 +20,9 @@
 //home
 @import "home";
 
+@import "pages/show";
+@import "new";
+
 $off-black: #1c1c1c;
 
 body {
@@ -27,6 +30,7 @@ body {
   padding-bottom: 100px;
   display: flex;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .lists{

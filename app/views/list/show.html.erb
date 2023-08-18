@@ -1,14 +1,39 @@
-<h1><%= @list.name %></h1>
+<div class="show-container">
+  <div id="back-button"><%= link_to "Back to all lists", lists_path %></div>
 
-<ul>
-<% @list_bookmarks.each do |bookmark| %>
- <li> <%= bookmark.comment %> |
-  <%= bookmark.movie.title %>
-  <%= bookmark.id %>  </li>
-  <%= link_to "Delete",
-  bookmark_destroy_path(bookmark),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-<% end %>
-<%= link_to "back", lists_path %>
-<%= link_to "Add bookmark", bookmark_path(@list)%>
+  <div class="bookmark-layout">
+    <div class="bookmark-header">
+      <h1><%= @list.name %></h1>
+      <div class="bookmark-btn">
+        <%= link_to "Add bookmark", bookmark_path(@list)%>
+      </div>
+    </div>
+    <hr class="solid">
+    <ul>
+      <div class="bookmarks">
+        <% @list_bookmarks.each do |bookmark| %>
+
+        <div class="bookmark">
+
+            <li>
+              <div id="bookmark-header">
+                <h4><%= bookmark.movie.title %> | <%= bookmark.movie.rating %>★</h4>
+                <div id="bookmark-delete">
+                  <%= link_to "Delete",
+                    bookmark_destroy_path(bookmark),
+                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+                    %>
+                </div>
+              </div>
+
+            <p><%= bookmark.comment %><br></p>
+          </li>
+        </div>
+
+      <% end %>
+      </div>
+    </ul>
+
+
+  </div>
+</div>

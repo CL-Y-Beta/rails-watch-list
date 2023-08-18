@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import TypeEffectController from "./type_effect_controller"
+application.register("type-effect", TypeEffectController)
